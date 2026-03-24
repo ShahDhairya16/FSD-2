@@ -1,0 +1,29 @@
+<!-- //Write one Json String with date property (yyyy-mm-dd) and print date in ist while clicking on button -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p id="demo">
+
+    <button onclick="displayTime()">Click ME</button>
+    </p>
+    <script>
+        function displayTime()
+        {
+            var obj={
+                "name":"Dhairya",
+                "Age":20,
+                "dob":"2003-03-10"
+            }
+            var date=new Date(obj.dob);
+            document.getElementById("demo").innerHTML=date;
+        }
+    </script>
+</body>
+</html>

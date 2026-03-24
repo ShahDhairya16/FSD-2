@@ -1,0 +1,29 @@
+<!-- WAP to increase the font size at interval of 1 sec and it should stop increasing when the font size reaches to 50 px. 
+ This task should be performed when you click  on increase button on browser default font size 15 px-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p" style="font-size: 15px;">Increase the font size</p>
+    <button onclick="increase()">Increase</button>
+    <script>
+        function increase(){
+            var size=15;
+            test = setInterval(() =>{
+                if(size<50){
+                    size++;
+                    document.getElementById("p").style.fontSize = size + "px";
+                }
+                else{
+                    clearInterval(test);
+                }
+            },2000);
+        }
+    </script>
+    
+</body>
+</html>

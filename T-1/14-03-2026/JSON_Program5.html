@@ -1,0 +1,47 @@
+<!--WAP to perform the task as asked below
+1) Add 3 buttons. Increase buttton to increase the font. It should stop increasing when the font size reaches to 200 px or stop button is clicked. Decrease button to decrease the font size. It should stop decreasing when the font size reaches to 20 px or stop button is clicked. Stop button to stop both increase and decrease function. Initial font size should be 15 px
+2) Increase or decrease interval is 1 sec and default size in 15 px<!-- WAP to increase the font size at interval of 1 sec and it should stop increasing when the font size reaches to 50 px. 
+ This task should be performed when you click  on increase button on browser default font size 15 px-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p" style="font-size: 15px;">Increase the font size</p>
+    <button onclick="increase()">Increase</button>
+    <button onclick="decrease()">Decrease</button>
+    <button onclick="stopfunction()">Stop</button>
+    <script>
+        var size=15;
+        function increase(){
+            test = setInterval(() =>{
+                if(size<200){
+                    size++;
+                    document.getElementById("p").style.fontSize = size + "px";
+                }
+                else{
+                    clearInterval(test);
+                }
+            },1000);
+        }
+        function decrease(){
+            test = setInterval(() =>{
+                if(size>10){
+                    size--;
+                    document.getElementById("p").style.fontSize = size + "px";
+                }
+                else{
+                    clearInterval(test);
+                }
+            },1000);
+        }
+        function stopfunction(){
+            clearInterval(test);
+        }
+    </script>
+    
+</body>
+</html>

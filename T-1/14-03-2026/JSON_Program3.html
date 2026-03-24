@@ -1,0 +1,28 @@
+<!--Initialise 2 variables and increament both the variables each time and display the addition of bothat interval of 1 sec-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p">
+    </p>
+    <button onclick="stopfunction()">Stop</button>
+    <script>
+        var a = 0;
+        var b = 2;
+       test =  setInterval(() => {
+            a++;
+            b++;
+            document.getElementById("p").innerHTML = a + " " + b;
+            document.getElementById("p").innerHTML += " Addition: " + (a + b);
+        } , 1000);
+        function stopfunction(){
+            clearInterval(test);
+        }
+    </script>
+</body>
+</html>
