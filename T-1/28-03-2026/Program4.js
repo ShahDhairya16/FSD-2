@@ -6,7 +6,7 @@ var fs = require('fs');
 http.createServer(function(req,res){
     res.writeHead(200,{'Content-Type':'text/html'});
     if(req.url == '/' || req.url =='/home'){
-        res.write('<h1 style="color:blue;font-size:32px;">Welcome to Home Page</h1>');
+        res.write('<h1 style="color:blue;font-size:32px;"><b>Welcome to Home Page</b></h1>');
     }
     else if(req.url == '/login'){
         data =fs.readFileSync('index.html');
