@@ -1,0 +1,1 @@
+//Write an express js script to define one json array of 3 object
